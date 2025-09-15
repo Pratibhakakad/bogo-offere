@@ -1,0 +1,253 @@
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* space between line and text */
+  margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 0;
+  border-top: 0.9px solid #C8C8C8;
+  max-width: 91.65px; /* width limit */
+}
+
+.divider span {
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #000;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 30px;
+}
+
+.container {
+  width: 341px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #FF6B82;
+}
+
+/* Unit Box */
+.unit {
+  width: 341px;
+  border: 0.9px solid #C8C8C8;
+  border-radius: 8px;
+  background: #fff;
+  margin: 10px 0;
+  padding: 10px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.unit.expanded {
+  border-color: #FF6B82;
+  background: #fffafc;
+}
+
+/* Radio button */
+.radio-container {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+}
+
+.radio-container input {
+  display: none;
+}
+
+.custom-radio {
+  width: 14.46px;
+  height: 14.46px;
+  border: 0.9px solid #FF6B82;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+.radio-container input:checked + .custom-radio::after {
+  content: "";
+  width: 9.04px;
+  height: 9.04px;
+  background: #FF6B82;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+
+/* Unit content */
+.unit-content {
+  margin-left: 40px;
+}
+
+.unit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.unit-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.unit-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: #000;
+}
+
+.discount-box {
+  background: #FF6B82;
+  color: #fff;
+  font-size: 10px;
+  border-radius: 2px;
+  padding: 2px 5px;
+}
+
+.unit-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.price-main {
+  font-weight: 600;
+  font-size: 14px;
+  color: #000;
+}
+
+.price-del {
+  font-size: 12px;
+  color: #888;
+  text-decoration: line-through;
+}
+
+/* Standard Price below header */
+.standard {
+  display: block;
+  font-size: 12px;
+  color: #000;
+  margin-top: 4px;
+  margin-left: 2px;
+}
+
+/* Extra options hidden by default */
+.extra-options {
+  display: none;
+  width: 100%;
+  margin-top: 12px;
+  padding-left: 40px;
+}
+
+.unit.expanded .extra-options {
+  display: block;
+}
+
+/* Labels like Size / Color */
+.extra-options label {
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  margin-right: 5px;
+}
+
+/* Dropdown styling */
+.extra-options select {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 11px;
+  padding: 2px 18px 2px 5px;
+  border: 0.9px solid #C8C8C8;
+  border-radius: 4px;
+  appearance: none;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='5.42' height='5.42' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='18 15 12 21 6 15'></polyline></svg>") no-repeat right 5px center;
+  background-size: 10px 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 6px 0;
+  font-size: 11px;
+}
+
+/* Summary Row */
+.summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0;
+  padding: 0 5px;
+}
+
+.free-delivery {
+  font-weight: 500;
+  font-size: 14px;
+  color: #FF6B82;
+}
+
+.total {
+  font-size: 14px;
+  color: #000;
+}
+
+.price-sub {
+  font-weight: 500;
+}
+
+/* Add to Cart */
+.add-to-cart {
+  width: 342px;
+  height: 40px;
+  background: #FF6B82;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-to-cart:hover {
+  background: #e65b73;
+}
+
+.plus-icon {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.cart-text {
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+}
+
+/* Powered By */
+.powered {
+  font-size: 12px;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.4);
+  text-align: right;
+  margin-top: 8px;
+}
